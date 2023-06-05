@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ ! -d "./.env" ]; then
+  echo "Missing .env directory. Try running install script".
+  exit 1
+fi
+
+source .env/bin/activate
+
+python main.py --message "Where is my car?"
